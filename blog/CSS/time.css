@@ -1,0 +1,53 @@
+.time-title{
+    margin-bottom: 0px;
+}
+.box{
+    min-height: 300px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background: url("../dairy/timeback.jpg") no-repeat center center;
+    background-size: 100%;
+}
+.box li{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 30px;
+    line-height: 24px;
+}
+.box li span{
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    color: #999;
+}
+.box li span:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 2px;
+    height: 50px;
+    background: #e0dfdf;
+}
+
+.box li i{
+    display: inline-block;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    font-style: normal;
+}
+.box li i:before{
+    content: '';
+    position: absolute;
+    bottom: 17px;
+    left: -12px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    background: #fff;
+}
+.box li i:hover:before{
+    background: #000;
+}

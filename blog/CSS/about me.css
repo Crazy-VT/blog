@@ -1,0 +1,36 @@
+.about-box{
+    width: 1120px;
+    padding: 20px 40px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+.about-box .about-top{
+    margin: 20px 0;
+}
+.about-top i{
+    width: 100px;
+    height: 100px;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+.about-top i:before{
+    content: "";
+    position: absolute;
+    background: url("http://jxhx2.yangqq.com/skin/jxhx/images/v.png") no-repeat;
+    bottom: 0;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-size: 24px;
+    z-index: 99999;
+}
+.about-top i img{
+    border-radius: 50%;
+    border: 2px solid rgba(42,228,197,0.7);
+}
+.about-box .about-bottom{
+
+}
