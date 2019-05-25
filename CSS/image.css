@@ -108,4 +108,36 @@
     padding: 0 0 0 20px;
     color: #d0d2d4;
 }
+.right-image>.right-log{
+    width: 260px;
+    height: 50px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+.right-log>li{
+    width: 60px;
+    height: 50px;
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
 
+.right-log .iconfont{
+    font-size: 36px;
+    color: #ef5509;
+}
+.right-log li .log1{
+    color: #ef5509;
+}
+.right-log li .log2{
+    color: #FF991A;
+}
+.right-log li .log3{
+    color: #1296DB;
+}
+.right-log li .log4{
+    color: #07AF12;
+}
