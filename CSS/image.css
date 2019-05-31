@@ -16,42 +16,50 @@
     position: relative;
     overflow: hidden;
 }
-/*.leftimage-Box .leftimage-bottom{*/
-/*    width: 40px;*/
-/*    height: 32px;*/
-/*    position: absolute;*/
-/*    left: 5%;*/
-/*    top: 114px;*/
-/*    background: #ffffff;*/
-/*    z-index: 999;*/
-/*}*/
-.leftimage-leftbutton{
-    width: 40px;
-    height: 32px;
+.leftimage-leftbuttom{
+    /*width: 40px;*/
+    /*height: 32px;*/
     position: absolute;
     left: 5%;
     top: 114px;
-    background: #ffffff;
+    /*background: #ffffff;*/
     z-index: 999;
 }
-.leftimage-rightbutton{
-    width: 40px;
-    height: 32px;
+.leftimage-rightbuttom{
+    /*width: 40px;*/
+    /*height: 32px;*/
     position: absolute;
     right: 5%;
     top: 114px;
-    background: #ffffff;
+    /*background: #ffffff;*/
     z-index: 999;
 }
-.leftimage-bottombutton{
+.leftimage-Box .iconfont{
+    font-size: 35px;
+    color: #e4e3e3;
+}
+.leftimage-bottombuttom{
     width: 100px;
     height: 8px;
     position: absolute;
     right: 50%;
     bottom: 16px;
     left: 256px;
-    background: #ffffff;
+    /*background: #ffffff;*/
     z-index: 999;
+    display: flex;
+    justify-content: space-between;
+
+}
+.leftimage-bottombuttom li{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: #e4e3e3;
+    opacity: .9;
+    text-indent: -9999px;
+    cursor: pointer;
+    transition: all 150ms;
 }
 
 .left-image .leftimage-Box img{
@@ -116,7 +124,7 @@
     justify-content: space-around;
 }
 .right-log>li{
-    width: 60px;
+    width: 50px;
     height: 50px;
     box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7);
     border-radius: 50%;

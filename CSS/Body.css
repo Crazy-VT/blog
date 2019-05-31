@@ -91,10 +91,10 @@
     text-overflow: ellipsis;
     display: none;
 }
-.leftNeck-list li.leftNeckList-1 span{
+.leftNeck-list li.hot span{
     background: #000;
 }
-.leftNeck-list li.leftNeckList-1 p{
+.leftNeck-list li.hot p{
     display: -webkit-box;
 }
 .left-Chest {

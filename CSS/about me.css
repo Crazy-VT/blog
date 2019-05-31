@@ -34,3 +34,17 @@
 .about-box .about-bottom{
 
 }
+.about-title{
+    margin: 20px 0;
+    font-size: 18px;
+    /*background: url(../images/hline.png) no-repeat bottom right;*/
+    width: 120px;
+    /*clear: both;*/
+    /*background-size: 40px;*/
+    border-bottom: #000 1px dashed;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    /*border-bottom: 1px dashed #000;*/
+
+}
