@@ -61,6 +61,9 @@
     cursor: pointer;
     transition: all 150ms;
 }
+.leftimage-bottombuttom .hot{
+    background: #ff723f;
+}
 
 .left-image .leftimage-Box img{
     width: 100%;
@@ -79,6 +82,11 @@
     height: 260px;
     display: block;
     position: absolute;
+    top: 0;
+    left: 617px;
+}
+.leftimage-Box >#first{
+    left: 0;
 }
 .middle-image{
     width: 270px;

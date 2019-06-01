@@ -280,7 +280,20 @@
     margin-right: 20px;
     display: block;
     overflow: hidden;
+    position: relative;
     /*background: #9fb4ff;*/
+}
+.leftWaistcon-img .imgword{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    font-style: normal;
+    padding: 3px 5px;
+    background: rgba(18,182,221,.8);
+    font-size: 14px;
+    color: #fff;
 }
 .left-Waist > .leftWaist-content .leftWaistcon-font{
     width: 640px;

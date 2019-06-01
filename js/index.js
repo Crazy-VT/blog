@@ -6,18 +6,22 @@ window.onload=function () {
     // console.log(leftpoint);
     for(let i=0;i<leftpoint.length;i++){
         leftpoint[i].onmouseenter=function () {
-            leftpoint[i].style.backgroundColor="#1296DB";
+            leftpoint[i].classList.add('hot');
         }
         leftpoint[i].onmouseleave=function () {
-            leftpoint[i].style.backgroundColor='#e4e3e3';
+            leftpoint[i].classList.remove('hot');
         }
     }
     //轮播
-    var num=0;
+    var current=0, next=0;
+
     let leftBtn=document.querySelector('.leftimage-leftbuttom');
     let rightBtn=document.querySelector('.leftimage-rightbuttom');
     let buttomBtn=document.querySelectorAll('.leftimage-bottombuttom>li');
     let imgs=document.querySelectorAll(".leftimage-Box>li");
+    let w=imgs[0].offsetWidth;
+    let flag=true;
+    /*
     leftBtn.onclick=function(){
         num--;
         if(num<0){
@@ -56,16 +60,75 @@ window.onload=function () {
             imgs[i].style.zIndex="3";
             buttomBtn[i].style.background="orange";
         }
+    }*/
+    rightBtn.onclick=function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next++;
+        if(next>=imgs.length){
+            next=0;
+        }
+        // console.log(next);
+        imgs[next].style.left=w+"px";
+        animate(imgs[current],{left:-w});
+        animate(imgs[next],{left:0},function () {
+            flag=true;
+        });
+        buttomBtn[current].classList.remove("hot");
+        buttomBtn[next].classList.add("hot");
+        current=next;
+    };
+    leftBtn.onclick=function(){
+        if(!flag){
+            return;
+        }
+        flag=false;
+        next--;
+        if(next<0){
+            next=imgs.length-1;
+        }
+        imgs[next].style.left=-w+"px";
+        animate(imgs[current],{left:w});
+        animate(imgs[next],{left:0},function () {
+            flag=true;
+        });
+        buttomBtn[current].classList.remove("hot");
+        buttomBtn[next].classList.add("hot");
+        current=next;
+    };
+    for(let i=0;i<4;i++){
+        buttomBtn[i].onclick=function(){
+            if(!flag){
+                return;
+            }
+            flag=false;
+            if(i===current){
+                flag=true;
+                return;
+            }
+            next=i;
+            imgs[next].style.left=-w+"px";
+            animate(imgs[current],{left:w});
+            animate(imgs[next],{left:0},function () {
+                flag=true;
+            });
+            buttomBtn[current].classList.remove("hot");
+            buttomBtn[next].classList.add("hot");
+            current=next;
+        }
     }
+
     // 自动播放
     let leftimageBox=document.querySelector(".leftimage-Box")
     // console.log(leftimageBox);
-    let t=setInterval(rightBtn.onclick,1000);
+    let t=setInterval(rightBtn.onclick,2000);
     leftimageBox.onmouseenter=function(){
         clearTimeout(t);
     }
     leftimageBox.onmouseleave=function(){
-       t= setInterval(rightBtn.onclick,1000);
+            t= setInterval(rightBtn.onclick,2000);
     }
     //五个标题
     let leftNecktitle=document.getElementsByClassName("leftNeck-title");
@@ -90,4 +153,27 @@ window.onload=function () {
                 text.classList.add("hot");
             }
         })
+
+//    按需加载
+//    页面滚动距离+屏幕高度>=图片到文档高度
+    let viewH=window.innerHeight;
+    let img=document.querySelectorAll(".anxu");
+    let Arr=[];
+    img.forEach(function (elm) {
+        let parent=elm.offsetParent;
+        Arr.push(parent.offsetTop+elm.offsetTop);
+    });
+    console.log(Arr);
+    window.onscroll=function () {
+        let scroll=document.documentElement.scrollTop;
+        console.log(scroll);
+        for(let i=0;i<Arr.length;i++){
+            if(scroll+viewH>Arr[i]){
+                if(!img[i].src){
+                    console.log(11);
+                img[i].src=img[i].getAttribute('aa');
+                }
+            }
+        }
+    }
 }
