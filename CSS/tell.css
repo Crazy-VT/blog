@@ -1,0 +1,85 @@
+.box{
+    width: 100%;
+    min-height: 300px;
+    background: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border-bottom: 1px solid #111;
+    overflow: hidden;
+}
+.content p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.content p input{
+    outline: none;
+}
+.content .head-img{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+}
+.content .head-img>li{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    /*opacity: 0.7;*/
+}
+.content>p>span{
+    display: inline-block;
+}
+.content>p>textarea{
+    width: 98%;
+    height: 180px;
+    resize: none;
+    outline: none;
+}
+.content>.button{
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: block;
+}
+.content>.button>input{
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+    margin-right: 10px;
+    float: right;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    background: #040404;
+}
+.Alltell{
+    width: 100%;
+    min-height: 300px;
+    margin: 10px 0;
+    padding: 20px 10px;
+}
+.Alltell >li{
+    margin: 10px 0;
+    padding: 20px 10px;
+    border-bottom: #ececec 1px solid;
+}
+.Alltell >li>.Alltell-img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.Alltell >li>.All{
+    margin-left: 50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+li>.All>.All-top{
+    display: flex;
+    justify-content: space-between;
+}
+li>.All>.All-bottom{
+
+}
+
+
