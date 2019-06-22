@@ -176,4 +176,18 @@ window.onload=function () {
             }
         }
     }
+
+    let hidden=document.querySelector('#hidden');
+    let ul=document.querySelector('#hidden> ul');
+    console.log(hidden);
+    hidden.onclick=function(){
+        console.log(this);
+        console.log(ul);
+        if (ul.style.display=='none'){
+            ul.style.display='block';
+        }else {
+            ul.style.display='none';
+        }
+    }
+
 }
